@@ -56,10 +56,19 @@
         </ListBox>
         
         <!--Profile Details-->
-        <StackPanel Grid.Row="3">
-            <Label x:Name="lbl_profileFullName" FontWeight="Bold"/>
-            <Label x:Name="lbl_profileBirthdate" FontWeight="Bold"/>
-            <Label x:Name="lbl_profileAge" FontWeight="Bold"/>
+        <StackPanel Grid.Row="3" HorizontalAlignment="Stretch">
+            <WrapPanel>
+                <Label x:Name="lbl_profileFullName" FontWeight="Bold"/>
+                <Label x:Name="lbl_profileFullName_Content" />
+            </WrapPanel>
+            <WrapPanel>
+                <Label x:Name="lbl_profileBirthdate" FontWeight="Bold"/>
+                <Label x:Name="lbl_profileBirthdate_Content"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label x:Name="lbl_profileAge" FontWeight="Bold"/>
+                <Label x:Name="lbl_profileAge_Content"/>
+            </WrapPanel>
         </StackPanel>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Row="2" Grid.RowSpan="4" Grid.Column="1"/>
         

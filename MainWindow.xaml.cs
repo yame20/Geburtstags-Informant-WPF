@@ -36,18 +36,39 @@ namespace Geburtstags_Informant_WPF
         private void button_deleteProfile_Click(object sender, RoutedEventArgs e)
         {
             ProfileManager.DeleteProfile(ProfileManager.CurrentProfile);
-            listBox_plantList.ItemsSource = null;
-            listBox_giftList.ItemsSource = null;
+            ClearProfileRelatedData();
         }
 
         private void listBox_profileList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             ProfileManager.CurrentProfile = (Profile)listBox_profileList.SelectedItem;
-            lbl_profileFullName.Content = "Name: " + ProfileManager.CurrentProfile.FirstName + " " + ProfileManager.CurrentProfile.LastName;
-            lbl_profileBirthdate.Content = "Geburtstag: " + ProfileManager.CurrentProfile.Birthdate.ToShortDateString();
-            int age = ProfileManager.ShowAgeInYear();
-            lbl_profileAge.Content = "Alter: " + age;
+            FillProfileDetails();
             LoadLists();
+        }
+
+        private void FillProfileDetails()
+        {
+            lbl_profileFullName.Content = "Name: ";
+            lbl_profileFullName_Content.Content = ProfileManager.CurrentProfile.FirstName + " " + ProfileManager.CurrentProfile.LastName;
+            lbl_profileBirthdate.Content = "Geburtstag: ";
+            lbl_profileBirthdate_Content.Content = ProfileManager.CurrentProfile.Birthdate.ToShortDateString();
+            int age = ProfileManager.ShowAgeInYear();
+            lbl_profileAge.Content = "Alter: ";
+            lbl_profileAge_Content.Content = age;
+        }
+
+        private void ClearProfileRelatedData()
+        {
+            //Profile-PropertyLists
+            listBox_plantList.ItemsSource = null;
+            listBox_giftList.ItemsSource = null;
+            //WPF ProfileDetails
+            lbl_profileFullName.Content = null;
+            lbl_profileFullName_Content.Content = null;
+            lbl_profileBirthdate.Content = null;
+            lbl_profileBirthdate_Content.Content = null;
+            lbl_profileAge.Content = null;
+            lbl_profileAge_Content.Content = null;
         }
 
         private void LoadLists()
