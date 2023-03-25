@@ -14,13 +14,11 @@ namespace Geburtstags_Informant_WPF
         public string Name { get; set; }
         [DataMember]
         public int Year { get; set; }
-        public string DisplayedNameInWPF { get; set; }
 
         public Gift(string name, int year)
         {
             Name = name;
             Year = year;
-            DisplayedNameInWPF = $"{Name} geschenkt im Jahr {Year}";
         }
 
         public override string ToString()
