@@ -31,6 +31,14 @@
       <Name>test5</Name>
       <Year>1996</Year>
     </Gift>
+    <Gift>
+      <Name>Name</Name>
+      <Year>1995</Year>
+    </Gift>
+    <Gift>
+      <Name>Name</Name>
+      <Year>2007</Year>
+    </Gift>
   </GiftList>
   <LastName>test</LastName>
   <PlantList>
@@ -51,6 +59,9 @@
     </Plant>
     <Plant>
       <Name>Nameasd</Name>
+    </Plant>
+    <Plant>
+      <Name>Name</Name>
     </Plant>
     <Plant>
       <Name>Name</Name>

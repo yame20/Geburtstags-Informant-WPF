@@ -94,11 +94,18 @@ namespace Geburtstags_Informant_WPF
         {
             if (ProfileManager.CurrentProfile != null)
             {
-                ProfileManager.CurrentProfile.GiftList.Add(new Gift(txtBox_giftNameBox.Text, Convert.ToInt32(txtBox_giftYearBox.Text)));
-                ProfileManager.SaveProfile(ProfileManager.CurrentProfile);
-                LoadLists();
-                txtBox_giftNameBox.Text = null;
-                txtBox_giftYearBox.Text = null;
+                if (!int.TryParse(txtBox_giftYearBox.Text, out int year))
+                {
+                    MessageBox.Show("Bitte gebe das Jahr in Zahlen ein!");
+                }
+                else
+                {
+                    ProfileManager.CurrentProfile.GiftList.Add(new Gift(txtBox_giftNameBox.Text, Convert.ToInt32(txtBox_giftYearBox.Text)));
+                    ProfileManager.SaveProfile(ProfileManager.CurrentProfile);
+                    LoadLists();
+                    txtBox_giftNameBox.Text = null;
+                    txtBox_giftYearBox.Text = null;
+                }
             }
         }
 

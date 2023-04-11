@@ -30,7 +30,7 @@ namespace Geburtstags_Informant_WPF
             {
                 MessageBox.Show("Bitte gebe einen Vor- und Nachnamen ein!");
             }
-            else if (CheckBirthdayInput(txtBox_birthDate.Text) == false)
+            else if (!DateTime.TryParse(txtBox_birthDate.Text, out DateTime birthDate))
             {
                 MessageBox.Show("Inkorrektes Datum! \n" +
                                 "Bitte gebe ein korrektes Datum ein. (TT.MM.JJJJ)");
@@ -40,18 +40,6 @@ namespace Geburtstags_Informant_WPF
                 ProfileManager.CreateProfile(txtBox_firstName.Text, txtBox_lastName.Text, Convert.ToDateTime(txtBox_birthDate.Text));
                 ProfileManager.AllProfiles.Add(ProfileManager.CurrentProfile);
                 Close();
-            }
-        }
-
-        private bool CheckBirthdayInput(string input)
-        {
-            if (string.IsNullOrEmpty(input) || DateTime.TryParse(input, out DateTime birthDate) == false)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
             }
         }
     }
