@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Geburtstags_Informant_WPF"
         mc:Ignorable="d"
-        Title="Profil erstellen" Height="230" Width="300"
+        Title="Profil erstellen" Height="230" Width="300" WindowStartupLocation="CenterScreen"
         Background="DimGray">
     
     <StackPanel Margin="10">

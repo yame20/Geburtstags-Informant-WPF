@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zachio\\Desktop\\Geburtstags-Informant-WPF\\Geburtstags-Informant-WPF.csproj": {}
+    "C:\\Users\\PC\\Documents\\Projekt\\Geburtstags-Informant WPF\\Geburtstags-Informant-WPF\\Geburtstags-Informant-WPF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zachio\\Desktop\\Geburtstags-Informant-WPF\\Geburtstags-Informant-WPF.csproj": {
+    "C:\\Users\\PC\\Documents\\Projekt\\Geburtstags-Informant WPF\\Geburtstags-Informant-WPF\\Geburtstags-Informant-WPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zachio\\Desktop\\Geburtstags-Informant-WPF\\Geburtstags-Informant-WPF.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Documents\\Projekt\\Geburtstags-Informant WPF\\Geburtstags-Informant-WPF\\Geburtstags-Informant-WPF.csproj",
         "projectName": "Geburtstags-Informant-WPF",
-        "projectPath": "C:\\Users\\Zachio\\Desktop\\Geburtstags-Informant-WPF\\Geburtstags-Informant-WPF.csproj",
-        "packagesPath": "C:\\Users\\Zachio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zachio\\Desktop\\Geburtstags-Informant-WPF\\obj\\",
+        "projectPath": "C:\\Users\\PC\\Documents\\Projekt\\Geburtstags-Informant WPF\\Geburtstags-Informant-WPF\\Geburtstags-Informant-WPF.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Documents\\Projekt\\Geburtstags-Informant WPF\\Geburtstags-Informant-WPF\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Zachio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

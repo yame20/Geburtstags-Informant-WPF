@@ -26,9 +26,21 @@ namespace Geburtstags_Informant_WPF
 
         private void button_createProfile_Click(object sender, RoutedEventArgs e)
         {
-            ProfileManager.CreateProfile(txtBox_firstName.Text, txtBox_lastName.Text, Convert.ToDateTime(txtBox_birthDate.Text));
-            ProfileManager.AllProfiles.Add(ProfileManager.CurrentProfile);
-            Close();
+            if (string.IsNullOrEmpty(txtBox_firstName.Text) || string.IsNullOrEmpty(txtBox_lastName.Text))
+            {
+                MessageBox.Show("Bitte gebe einen Vor- und Nachnamen ein!");
+            }
+            else if (!DateTime.TryParse(txtBox_birthDate.Text, out DateTime birthDate))
+            {
+                MessageBox.Show("Inkorrektes Datum! \n" +
+                                "Bitte gebe ein korrektes Datum ein. (TT.MM.JJJJ)");
+            }
+            else
+            {
+                ProfileManager.CreateProfile(txtBox_firstName.Text, txtBox_lastName.Text, Convert.ToDateTime(txtBox_birthDate.Text));
+                ProfileManager.AllProfiles.Add(ProfileManager.CurrentProfile);
+                Close();
+            }
         }
     }
 }
